@@ -1,6 +1,3 @@
-
-
-
 import pdfplumber
 import re
 
