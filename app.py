@@ -7,9 +7,13 @@ import os
 from dotenv import load_dotenv
 from utils import extract_text_from_pdf, chunk_text
 from generator import generate_flashcards
+import openai  # Add this import
 
 # Load environment variables
 load_dotenv()
+
+# Configure OpenAI with your API key
+openai.api_key = os.getenv("OPENAI_API_KEY")  # This uses the key from .env
 
 # Page config
 st.set_page_config(page_title="📚 AI Flashcard Generator", layout="centered")
@@ -126,6 +130,7 @@ else:
 #         st.warning("No flashcards could be generated.")
 # else:
 #     st.info("📄 Please upload a PDF or enter text to get started.")
+
 
 
 
