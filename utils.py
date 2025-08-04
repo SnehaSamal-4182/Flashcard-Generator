@@ -1,29 +1,4 @@
-# # utils.py
 
-# import pdfplumber
-# import nltk
-# nltk.download('punkt')
-# from nltk.tokenize import sent_tokenize
-
-# def extract_text_from_pdf(pdf_path):
-#     text = ""
-#     with pdfplumber.open(pdf_path) as pdf:
-#         for page in pdf.pages:
-#             text += page.extract_text() + "\n"
-#     return text
-
-# def chunk_text(text, max_len=300):
-#     sentences = sent_tokenize(text)
-#     chunks, chunk = [], ""
-#     for sentence in sentences:
-#         if len(chunk) + len(sentence) <= max_len:
-#             chunk += sentence + " "
-#         else:
-#             chunks.append(chunk.strip())
-#             chunk = sentence + " "
-#     if chunk:
-#         chunks.append(chunk.strip())
-#     return chunks
 
 
 import pdfplumber
@@ -61,3 +36,4 @@ def chunk_text(text, max_len=300):
         chunks.append(chunk.strip())
 
     return chunks
+
